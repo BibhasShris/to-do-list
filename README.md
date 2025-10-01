@@ -1,5 +1,7 @@
 # to-do-list
 
+![Alt text](/img/mockup.png)
+
 Creating a to-do list in React.
 App
 └─ TodoApp  

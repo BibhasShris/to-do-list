@@ -1,3 +1,3 @@
 export default function AddTaskButton() {
-  return <button>+ Add item</button>;
+  return <button>+ Add task</button>;
 }

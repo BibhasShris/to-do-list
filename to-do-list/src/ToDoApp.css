@@ -44,20 +44,27 @@ td.priority {
 /* Table */
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  border: none;
   margin-top: 20px;
+  font-size: 20px;
 }
 
 th {
-  text-align: left;
-  font-size: 18px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
   padding: 10px;
+  border: none;
 }
 
 /* Task Row */
 td {
-  padding: 10px;
+  padding: 15px;
+  border: none;
   font-size: 18px;
+  text-align: center;
 }
 
 /* Task name cells */
@@ -84,20 +91,24 @@ td.status select {
 
 /* Status colors */
 td.status .done {
-  background: #90ee90; /* green */
+  background: #90ee90;
+  color: rgb(0, 0, 0);
 }
 td.status .in-progress {
-  background: #f4e285; /* yellow */
+  background: #f4e285;
+  color: rgb(0, 0, 0);
 }
 td.status .on-hold {
-  background: #f08080; /* red */
+  background: #f08080;
+  color: rgb(0, 0, 0);
 }
 
 /* Due date cells */
 td.due {
-  background: #dda0dd;
+  background: #b669b6;
   border-radius: 6px;
   text-align: center;
+  color: rgb(255, 255, 255);
 }
 
 /* Add Task button */

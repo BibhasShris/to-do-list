@@ -1,0 +1,113 @@
+/* General reset */
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container */
+div {
+  text-align: center;
+}
+
+/* Header */
+h1 {
+  background: #2f3a55;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 28px;
+}
+
+/* Table headers */
+th {
+  text-align: center;
+  font-size: 18px;
+  color: #000000;
+  padding: 12px;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Priority cells */
+td.priority {
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  width: 60px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  text-align: left;
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* Task Row */
+td {
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* Task name cells */
+td.task-name {
+  background: #e9967a;
+  color: black;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Status cells */
+td.status {
+  border-radius: 6px;
+  text-align: center;
+  color: black;
+}
+
+td.status select {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Status colors */
+td.status .done {
+  background: #90ee90; /* green */
+}
+td.status .in-progress {
+  background: #f4e285; /* yellow */
+}
+td.status .on-hold {
+  background: #f08080; /* red */
+}
+
+/* Due date cells */
+td.due {
+  background: #dda0dd;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Add Task button */
+form button {
+  background: #87aaf0;
+  color: black;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}

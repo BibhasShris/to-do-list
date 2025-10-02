@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./Header";
 import ToDoTable from "./ToDoTable";
 import AddTaskButton from "./AddTaskButton";
+import "./ToDoApp.css";
 
 export default function ToDoApp() {
   const [tasks, setTasks] = useState([

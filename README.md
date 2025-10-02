@@ -8,9 +8,9 @@ Creating a to-do list in React.
 Component Hierarchy
 ![Alt text](/img/component_Hierarchy.png)
 
-ToDoApp – the root container for the entire application.
-Header – displays the title “To-do list”.
-ToDoTable – wraps the table of tasks.
-TableHead – column headers (Priority, Task, Status, Due).
-TaskDetailRow – one row per task, containing: Priority, Task, Status, Due
-AddTaskButton – button at the bottom to add new tasks.
+ToDoApp – the root container for the entire application. <br>
+Header – displays the title “To-do list”. <br>
+ToDoTable – wraps the table of tasks. <br>
+TableHead – column headers (Priority, Task, Status, Due). <br>
+TaskDetailRow – one row per task, containing: Priority, Task, Status, Due <br>
+AddTaskButton – button at the bottom to add new tasks. <br>

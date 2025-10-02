@@ -57,3 +57,18 @@ From these, the **minimal state** is:
 Everything else can be derived from this state.  
 For example, priority can be derived from the order of tasks in the array,  
 and the table headers are static so they don’t need to be stored in state.
+
+## Identify Where State Should Live
+
+After identifying the minimal state, the next step was to decide which component should own it. React uses one-way data flow, so state should live at the closest common parent of all components that need it.
+
+- **tasks**: Both the `ToDoTable` (to render tasks) and the add task form/button (to add tasks) need access to this data. The closest common parent is `ToDoApp`. Therefore, the `tasks` state will live in `ToDoApp` and be passed down as props to child components. For example, `ToDoApp` will pass `tasks` into `ToDoTable`.
+
+- **newTask inputs**: The temporary input values for adding a new task (name, status, due) are only needed while the user is typing. They can live locally in the add task form component. When the form is submitted, the new task will be sent up to `ToDoApp` using a callback, which will then update the `tasks` array state.
+
+Derived values such as task priority or whether a task is “done” should not be stored in state. They can be computed dynamically:
+
+- Task priority = the order of the array (`index + 1`).
+- Completed tasks = filter tasks where `status !== "done"`.
+
+This ensures the state stays minimal, consistent, and easy to update.

@@ -72,3 +72,6 @@ Derived values such as task priority or whether a task is “done” should not 
 - Completed tasks = filter tasks where `status !== "done"`.
 
 This ensures the state stays minimal, consistent, and easy to update.
+
+For generating unique task IDs I used `Date.now()`, and for selecting due dates I used
+the `<input type="date">` element. I learned both from MDN Web Docs.

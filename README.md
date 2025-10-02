@@ -106,4 +106,6 @@ Once I had the minimal state and its ownership set up, I implemented the logic t
    - Due date = purple
    - Rounded corners gave each cell a card-like look.
 
-   ![Alt text](image/final.png)
+## Final Product
+
+![Alt text](img/final.png)

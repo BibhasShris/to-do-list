@@ -58,9 +58,9 @@ Everything else can be derived from this state.
 For example, priority can be derived from the order of tasks in the array,  
 and the table headers are static so they don’t need to be stored in state.
 
-## Identify Where State Should Live
+## Identifying where state should live
 
-After identifying the minimal state, the next step was to decide which component should own it. React uses one-way data flow, so state should live at the closest common parent of all components that need it.
+After identifying the minimal state, the next step was to decide which component should own it.
 
 - **tasks**: Both the `ToDoTable` (to render tasks) and the add task form/button (to add tasks) need access to this data. The closest common parent is `ToDoApp`. Therefore, the `tasks` state will live in `ToDoApp` and be passed down as props to child components. For example, `ToDoApp` will pass `tasks` into `ToDoTable`.
 
@@ -69,9 +69,41 @@ After identifying the minimal state, the next step was to decide which component
 Derived values such as task priority or whether a task is “done” should not be stored in state. They can be computed dynamically:
 
 - Task priority = the order of the array (`index + 1`).
-- Completed tasks = filter tasks where `status !== "done"`.
-
-This ensures the state stays minimal, consistent, and easy to update.
+- Completed tasks = filter tasks where `status !== "done"`. So completed task gets removed.
 
 For generating unique task IDs I used `Date.now()`, and for selecting due dates I used
 the `<input type="date">` element. I learned both from MDN Web Docs.
+
+## Implementing State and Interactivity
+
+Once I had the minimal state and its ownership set up, I implemented the logic to make the app interactive and progressively refined the styling.
+
+### State & Interactivity
+
+- I moved the hardcoded tasks into state using useState in ToDoApp.
+- Added handleAddTask and handleStatusChange to let child components update state.
+- Used callbacks (onAddTask, onStatusChange) passed as props so data could flow back up.
+- Tasks update or get removed when status changes to "Done".
+- Adding a task generates a unique id with Date.now() (reference: MDN Web Docs).
+
+### Styling Process
+
+1. **Initial styling (plain table)**
+
+   - At first, I used a plain <table border="1"> with default borders.
+   - This was useful for debugging, since I could clearly see the rows and columns.
+
+   ![Alt text](img/fix.png)
+
+2. **Removed borders & added spacing**
+
+   - I removed table borders (border: none) and added border-spacing for space between rows.
+
+3. **Colored & rounded cells**
+
+   - Task = orange
+   - Status = green(done), yellow(in progress), or red(On hold) depending on value
+   - Due date = purple
+   - Rounded corners gave each cell a card-like look.
+
+   ![Alt text](image/final.png)

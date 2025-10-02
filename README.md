@@ -14,3 +14,6 @@ ToDoTable – wraps the table of tasks. <br>
 TableHead – column headers (Priority, Task, Status, Due). <br>
 TaskDetailRow – one row per task, containing: Priority, Task, Status, Due <br>
 AddTaskButton – button at the bottom to add new tasks. <br>
+
+<strong>Static Version</strong>
+![Alt text](/img/StaticVersion.png)

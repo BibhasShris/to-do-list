@@ -11,13 +11,13 @@ export default function ToDoApp() {
       priority: 1,
       name: "Homework",
       status: "In Progress",
-      due: "2025-10-01",
+      due: "2025-10-03",
     },
-    { id: 2, priority: 2, name: "Gym", status: "On Hold", due: "2025-10-02" },
+    { id: 2, priority: 2, name: "Gym", status: "On Hold", due: "2025-10-04" },
   ]);
 
   function handleAddTask(newTask) {
-    setTasks([...tasks, { ...newTask, priority: tasks.length + 1 }]);
+    setTasks([...tasks, newTask]);
   }
 
   function handleStatusChange(taskId, newStatus) {

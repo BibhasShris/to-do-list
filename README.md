@@ -106,6 +106,12 @@ Once I had the minimal state and its ownership set up, I implemented the logic t
    - Due date = purple
    - Rounded corners gave each cell a card-like look.
 
+### Additional Update: Priority
+
+- In the static version, task priority was assigned based on the order tasks were added (`tasks.length + 1`).
+- In the final version, I updated it so that **priority is determined by the task’s due date**.
+- Tasks are now sorted by earliest due date first, and the priority numbers are recalculated dynamically (`index + 1`) when rendering the list.
+
 ## Final Product
 
 ![Alt text](img/final.png)
